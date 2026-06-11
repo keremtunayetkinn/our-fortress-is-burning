@@ -1,0 +1,25 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Node (if React/Vite ever added)
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# Local secrets
+.env*
+*.pem
+*.key
+
+# Test/output artifacts
+coverage/
+.nyc_output/

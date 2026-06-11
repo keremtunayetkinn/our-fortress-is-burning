@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="noindex" />
+  <title>404 — Bu sayfa küle döndü.</title>
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">Our Fortress Is Burning</a>
+      <ul class="nav-links">
+        <li><a href="index.html"    data-i18n="nav.home">Giriş</a></li>
+        <li><a href="uclem.html"    data-i18n="nav.trilogy">Üçleme</a></li>
+        <li><a href="felsefe.html"  data-i18n="nav.philosophy">Felsefe</a></li>
+        <li><a href="sentez.html"   data-i18n="nav.synthesis">Sentez</a></li>
+        <li><a href="kaynakca.html" data-i18n="nav.sources">Kaynakça</a></li>
+      </ul>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="tr" data-i18n="nav.lang.tr" data-i18n-attr="aria-label:lang.aria.tr">TR</button>
+        <button type="button" data-lang="en" data-i18n="nav.lang.en" data-i18n-attr="aria-label:lang.aria.en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container error-page">
+    <article class="page">
+      <section lang="tr" data-lang="tr">
+        <p class="eyebrow">404</p>
+        <h1>Bu sayfa küle döndü.</h1>
+        <p class="lead">Aradığınız adres burada değil. <a href="index.html">Ana sayfaya dönün</a>.</p>
+      </section>
+      <section lang="en" data-lang="en" hidden>
+        <p class="eyebrow">404</p>
+        <h1>This page has turned to ash.</h1>
+        <p class="lead">Nothing lives at that address. <a href="index.html">Back to home</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.note">Bu site Agalloch ile bağlı resmî bir kaynak değildir.</p>
+    <p><a href="kaynakca.html" data-i18n="footer.sources">Kaynakçaya git</a></p>
+  </footer>
+
+  <script src="assets/js/chrome.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/glossary.js"></script>
+  <script src="assets/js/music-facade.js"></script>
+  <script src="assets/js/grain.js"></script>
+</body>
+</html>

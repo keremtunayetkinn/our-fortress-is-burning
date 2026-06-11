@@ -1,0 +1,36 @@
+/* Kül ve Gren — Design Tokens
+   Estetik referans: Ashes Against the Grain (siyah-beyaz, gren, distorsiyon).
+   Renk yoktur; yalnızca gri tonlama. */
+
+:root {
+  --ink-0:  #000000;
+  --ink-1:  #0d0d0d;
+  --ink-2:  #1a1a1a;
+  --ash-1:  #6f6f6f;
+  --ash-0:  #a8a8a8;
+  --bone-0: #e8e6e1;
+  --bone-1: #ffffff;
+
+  --serif: "EB Garamond", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --measure: 68ch;
+  --gap-1: 0.5rem;
+  --gap-2: 1rem;
+  --gap-3: 1.5rem;
+  --gap-4: 2.5rem;
+  --gap-5: 4rem;
+  --gap-6: 6rem;
+
+  --grain-opacity: 0.06;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
