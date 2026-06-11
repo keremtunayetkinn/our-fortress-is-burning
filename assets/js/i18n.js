@@ -22,7 +22,9 @@
       'music.ext':      'Resmî sayfada dinle ↗',
       'music.disabled': 'Resmî oynatıcı bağlantısı sahibin sağlayacağı resmî URL’den sonra etkinleşir.',
       'crumb.back':     '← Üçleme ana sayfasına dön',
-      'crumb.back.phil':'← Felsefe ana sayfasına dön'
+      'crumb.back.phil':'← Felsefe ana sayfasına dön',
+      'image.focus':    'Görseli netleştir',
+      'image.blur':     'Görseli bulanıklaştır'
     },
     en: {
       'nav.home':       'Home',
@@ -42,7 +44,9 @@
       'music.ext':      'Listen on official page ↗',
       'music.disabled': 'The official player link will activate once the owner supplies the official URL.',
       'crumb.back':     '← Back to trilogy',
-      'crumb.back.phil':'← Back to philosophy'
+      'crumb.back.phil':'← Back to philosophy',
+      'image.focus':    'Sharpen image',
+      'image.blur':     'Re-blur image'
     }
   };
 

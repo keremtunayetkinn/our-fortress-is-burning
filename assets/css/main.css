@@ -450,3 +450,68 @@ article.page .footnote {
   text-align: center;
 }
 .error-page h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+
+/* ---------- Fortress hero (full-bleed image at page bottom) ----------
+   NOTE: Magic MCP unavailable, hand-written to token spec (guide §1.5).
+   Image is blurred by default; a centered button toggles a focused state
+   that removes the filter. The block sits outside <main> so it spans the
+   full viewport width without breaking the narrow reading column. */
+.fortress-hero {
+  position: relative;
+  width: 100%;
+  background: var(--ink-0);
+  border-block: 1px solid var(--ink-2);
+  margin-top: var(--gap-5);
+  overflow: hidden;
+}
+.fortress-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  filter: blur(16px) brightness(0.7) saturate(0.6);
+  transition: filter 700ms ease;
+  will-change: filter;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fortress-hero__img { transition: none; }
+}
+.fortress-hero.is-focused .fortress-hero__img {
+  filter: none;
+}
+
+.fortress-hero__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: rgba(13, 13, 13, 0.78);
+  color: var(--bone-0);
+  border: 1px solid var(--ash-0);
+  padding: 0.85rem 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 200ms ease, color 200ms ease,
+              border-color 200ms ease, opacity 300ms ease;
+}
+.fortress-hero__btn:hover,
+.fortress-hero__btn:focus-visible {
+  background: var(--bone-1);
+  color: var(--ink-0);
+  border-color: var(--bone-1);
+  outline: none;
+}
+.fortress-hero.is-focused .fortress-hero__btn {
+  opacity: 0.35;
+}
+.fortress-hero.is-focused .fortress-hero__btn:hover,
+.fortress-hero.is-focused .fortress-hero__btn:focus-visible {
+  opacity: 1;
+}
