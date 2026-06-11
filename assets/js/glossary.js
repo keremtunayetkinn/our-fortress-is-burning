@@ -34,7 +34,19 @@
       'transandantalizm':
         'Doğayı ruhsal bir hakikatin görünümü olarak okuyan 19. yüzyıl Amerikan akımı (Emerson, Thoreau). Romantik etkilerle Agalloch’un lirik dilinde yankılanır.',
       'post-metal':
-        'Atmosferik dokuları, uzun yapıları ve sözden çok hissi öne çıkaran çağdaş metal türü. Agalloch genellikle bu çatı altında anılır; ancak grup kendini tek bir etikete sıkıştırmaz.'
+        'Atmosferik dokuları, uzun yapıları ve sözden çok hissi öne çıkaran çağdaş metal türü. Agalloch genellikle bu çatı altında anılır; ancak grup kendini tek bir etikete sıkıştırmaz.',
+      'golge':
+        'Bu sitede gölge, benliğin ölümü reddederek kendi etrafına ördüğü mimari için kullanılır. Sözcük Jung’dan (Aion, 1951) ödünç alınmıştır ama daha dar bir anlamla: ölüm-reddi temelli savunma yapıları. Becker’ın "ölümsüzlük projesi" ile Heidegger’in das Man’ı bu çizgide okunur.',
+      'karakter':
+        'Sitede gölgenin karşısına yerleştirilen kavram: doğanın akışıyla aynı tözden bir oluş. Karakterin "icabı" akışla bütünleşmektir; Spinoza’nın conatus’u, karakter söz konusu olduğunda, akışın bir biçimi olarak yaşanır.',
+      'conatus':
+        'Spinoza, Etika III/6–7: "her şey, kendi varlığında ısrar etmeye çabalar" (unaquaeque res, quantum in se est, in suo esse perseverare conatur). Bir modun fiili özüdür; tercih değil, modun kendisi olduğu için içkin eğilim. Sitenin "karakterin icabı" formülünün klasik temeli.',
+      'negentropi':
+        'Erwin Schrödinger’in What Is Life? (1944) eserinde önerdiği kavram: canlının biçimini koruyabilmek için çevresinden çektiği "negatif entropi". Canlı, yerel bir entropi gradyanıdır; ölüm bu gradyanın çevreyle dengelenmesidir.',
+      'olum-korkusu':
+        'Canlılara içgüdüsel olarak kazınmış, biçimin dağılmasına karşı geliştirilen savunmanın temeli. Sitede gölgenin "tohumu" olarak okunur: ölmemek için kurulan ilk savunma, zamanla bütün gölge yapılarının kale mimarisine dönüşür.',
+      'olume-dogru-varlik':
+        'Heidegger, Sein und Zeit §§46–53: Sein-zum-Tode. Dasein’in kendi sonluluğuyla ilişkisi. Gündelik (otantik olmayan) Dasein, ölümü "el"in (das Man) sesine emanet ederek ondan kaçar; otantik varoluş, ölümü en kendine ait imkân olarak üstlenir.'
     },
     en: {
       'entropi':
@@ -66,7 +78,19 @@
       'transandantalizm':
         'A 19th-century American current (Emerson, Thoreau) reading nature as the visible face of a spiritual truth. Its Romantic echoes resonate in Agalloch’s lyrical idiom.',
       'post-metal':
-        'A contemporary metal idiom built on atmospheric textures, long forms, and feeling over text. Agalloch are often filed here; the band itself resists single-label boxes.'
+        'A contemporary metal idiom built on atmospheric textures, long forms, and feeling over text. Agalloch are often filed here; the band itself resists single-label boxes.',
+      'golge':
+        'On this site, "shadow" names the architecture the self builds around itself by refusing death. The word is borrowed from Jung (Aion, 1951) in a narrower sense: defensive structures grounded in death-refusal. Becker’s "immortality project" and Heidegger’s das Man are read along this line.',
+      'karakter':
+        'The site’s counter-term to shadow: a becoming of the same substance as nature’s flow. Character’s "requirement" is to integrate with that flow; Spinoza’s conatus, when character is at issue, is lived as one of the flow’s forms.',
+      'conatus':
+        'Spinoza, Ethics III/6–7: "each thing, as far as it lies in itself, endeavors to persist in its being" (unaquaeque res, quantum in se est, in suo esse perseverare conatur). It is the actual essence of a mode — not a choice but an internal inclination because it is what the mode is. The classical ground for the site’s formula of "character’s requirement."',
+      'negentropi':
+        'A term introduced in Erwin Schrödinger’s What Is Life? (1944): the "negative entropy" a living being draws from its environment to hold its form. The living being is a local entropy gradient; death is that gradient equalising with its surroundings.',
+      'olum-korkusu':
+        'The instinctual fear of death coded into living beings — the base of every defense built against the scattering of form. On this site, it is read as the seed of the shadow: the first defense built against dying becomes, over time, the fortress-architecture of every shadow structure.',
+      'olume-dogru-varlik':
+        'Heidegger, Being and Time §§46–53: Sein-zum-Tode. Dasein’s relation to its own finitude. Everyday (inauthentic) Dasein flees death by handing it over to "the They" (das Man); authentic existence takes death up as its ownmost possibility.'
     }
   };
 
