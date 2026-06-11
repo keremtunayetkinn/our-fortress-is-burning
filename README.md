@@ -26,7 +26,7 @@ npx serve .
 fortress-site/
   index.html              Giriş / manifesto
   uclem.html              Üçleme genel bakış
-  uclem-i.html            Bölüm I — Yangının Yaklaşışı
+  uclem-i.html            Bölüm I — Yangının Yaklaşması
   uclem-ii.html           Bölüm II — Bloodbirds
   uclem-iii.html          Bölüm III — The Grain
   felsefe.html            Felsefe genel bakış
