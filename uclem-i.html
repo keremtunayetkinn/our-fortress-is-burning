@@ -151,10 +151,19 @@
   </main>
 
   <section class="fortress-hero" aria-label="Our Fortress Is Burning… I">
-    <img class="fortress-hero__img"
-         src="assets/images/fortress-i.png"
-         alt="Our Fortress Is Burning… I"
-         loading="lazy" decoding="async" />
+    <picture>
+      <source type="image/webp"
+              srcset="assets/images/fortress-i-768.webp 768w,
+                      assets/images/fortress-i-1280.webp 1280w,
+                      assets/images/fortress-i-1920.webp 1920w,
+                      assets/images/fortress-i.webp 2816w"
+              sizes="100vw" />
+      <img class="fortress-hero__img"
+           src="assets/images/fortress-i.png"
+           alt="Our Fortress Is Burning… I"
+           width="2816" height="1536"
+           loading="lazy" decoding="async" />
+    </picture>
     <button class="fortress-hero__btn" type="button"
             data-i18n="image.focus"
             aria-pressed="false">Görseli netleştir</button>

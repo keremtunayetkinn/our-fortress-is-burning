@@ -201,10 +201,19 @@
   </main>
 
   <section class="fortress-hero" aria-label="Our Fortress Is Burning… II — Bloodbirds">
-    <img class="fortress-hero__img"
-         src="assets/images/fortress-ii.png"
-         alt="Our Fortress Is Burning… II — Bloodbirds"
-         loading="lazy" decoding="async" />
+    <picture>
+      <source type="image/webp"
+              srcset="assets/images/fortress-ii-768.webp 768w,
+                      assets/images/fortress-ii-1280.webp 1280w,
+                      assets/images/fortress-ii-1920.webp 1920w,
+                      assets/images/fortress-ii.webp 2760w"
+              sizes="100vw" />
+      <img class="fortress-hero__img"
+           src="assets/images/fortress-ii.png"
+           alt="Our Fortress Is Burning… II — Bloodbirds"
+           width="2760" height="1504"
+           loading="lazy" decoding="async" />
+    </picture>
     <button class="fortress-hero__btn" type="button"
             data-i18n="image.focus"
             aria-pressed="false">Görseli netleştir</button>
