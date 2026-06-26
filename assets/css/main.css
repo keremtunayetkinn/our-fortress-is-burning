@@ -167,14 +167,15 @@ hr {
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--bone-1); }
 
 .lang-switch {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0;
+  position: relative;
   font-family: var(--mono);
   font-size: 0.78rem;
   letter-spacing: 0.12em;
 }
-.lang-switch button {
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
   background: transparent;
   color: var(--ash-1);
   border: 1px solid var(--ink-2);
@@ -184,14 +185,65 @@ hr {
   letter-spacing: inherit;
   text-transform: uppercase;
 }
-.lang-switch button + button { border-left: 0; }
-.lang-switch button[aria-pressed="true"] {
+.lang-toggle::after {
+  content: "\25BE";
+  font-size: 0.9em;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+.lang-toggle:hover { color: var(--bone-1); }
+.lang-toggle[aria-expanded="true"] {
   color: var(--bone-1);
   border-color: var(--ash-0);
 }
-.lang-switch button:focus-visible {
+.lang-toggle[aria-expanded="true"]::after { transform: rotate(180deg); }
+.lang-toggle:focus-visible {
   outline: 2px solid var(--bone-1);
   outline-offset: 2px;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 60;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  background: var(--ink-1);
+  border: 1px solid var(--ink-2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.lang-menu[hidden] { display: none; }
+.lang-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  background: transparent;
+  color: var(--ash-1);
+  border: 0;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.lang-menu button:hover { color: var(--bone-1); background: var(--ink-2); }
+.lang-menu button[aria-checked="true"] { color: var(--bone-0); }
+.lang-menu button[aria-checked="true"]::before {
+  content: "\2022\00a0";
+  color: var(--ash-0);
+}
+.lang-menu button:not([aria-checked="true"])::before {
+  content: "\00a0\00a0";
+}
+.lang-menu button:focus-visible {
+  outline: 2px solid var(--bone-1);
+  outline-offset: -2px;
 }
 
 /* ---------- Footer ---------- */

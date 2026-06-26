@@ -23,14 +23,17 @@
         <li><a href="sentez.html"   data-i18n="nav.synthesis">Sentez</a></li>
         <li><a href="kaynakca.html" data-i18n="nav.sources">Kaynakça</a></li>
       </ul>
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-lang="tr" data-i18n="nav.lang.tr" data-i18n-attr="aria-label:lang.aria.tr">TR</button>
-        <button type="button" data-lang="en" data-i18n="nav.lang.en" data-i18n-attr="aria-label:lang.aria.en">EN</button>
-        <button type="button" data-lang="de" data-i18n="nav.lang.de" data-i18n-attr="aria-label:lang.aria.de">DE</button>
-        <button type="button" data-lang="fr" data-i18n="nav.lang.fr" data-i18n-attr="aria-label:lang.aria.fr">FR</button>
-        <button type="button" data-lang="es" data-i18n="nav.lang.es" data-i18n-attr="aria-label:lang.aria.es">ES</button>
-        <button type="button" data-lang="ru" data-i18n="nav.lang.ru" data-i18n-attr="aria-label:lang.aria.ru">RU</button>
-        <button type="button" data-lang="ja" data-i18n="nav.lang.ja" data-i18n-attr="aria-label:lang.aria.ja">JA</button>
+      <div class="lang-switch">
+        <button type="button" class="lang-toggle" aria-haspopup="true" aria-expanded="false" data-i18n="nav.lang.label">Dil</button>
+        <ul class="lang-menu" role="menu" hidden>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="tr" lang="tr">Türkçe</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="en" lang="en">English</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="de" lang="de">Deutsch</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="fr" lang="fr">Français</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="es" lang="es">Español</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ru" lang="ru">Русский</button></li>
+          <li role="none"><button type="button" role="menuitemradio" aria-checked="false" data-lang="ja" lang="ja">日本語</button></li>
+        </ul>
       </div>
     </nav>
   </header>

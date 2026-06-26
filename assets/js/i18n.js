@@ -7,6 +7,7 @@
 
   const DICT = {
     tr: {
+      'nav.lang.label': 'Dil',
       'nav.home':       'Giriş',
       'nav.trilogy':    'Üçleme',
       'nav.philosophy': 'Felsefe',
@@ -39,6 +40,7 @@
       'image.blur':     'Görseli bulanıklaştır'
     },
     en: {
+      'nav.lang.label': 'Language',
       'nav.home':       'Home',
       'nav.trilogy':    'Trilogy',
       'nav.philosophy': 'Philosophy',
@@ -71,6 +73,7 @@
       'image.blur':     'Re-blur image'
     },
     de: {
+      'nav.lang.label': 'Sprache',
       'nav.home':       'Start',
       'nav.trilogy':    'Trilogie',
       'nav.philosophy': 'Philosophie',
@@ -103,6 +106,7 @@
       'image.blur':     'Bild erneut weichzeichnen'
     },
     fr: {
+      'nav.lang.label': 'Langue',
       'nav.home':       'Accueil',
       'nav.trilogy':    'Trilogie',
       'nav.philosophy': 'Philosophie',
@@ -135,6 +139,7 @@
       'image.blur':     'Rendre l’image floue'
     },
     es: {
+      'nav.lang.label': 'Idioma',
       'nav.home':       'Inicio',
       'nav.trilogy':    'Trilogía',
       'nav.philosophy': 'Filosofía',
@@ -167,6 +172,7 @@
       'image.blur':     'Volver a desenfocar la imagen'
     },
     ru: {
+      'nav.lang.label': 'Язык',
       'nav.home':       'Главная',
       'nav.trilogy':    'Трилогия',
       'nav.philosophy': 'Философия',
@@ -199,6 +205,7 @@
       'image.blur':     'Снова размыть изображение'
     },
     ja: {
+      'nav.lang.label': '言語',
       'nav.home':       'ホーム',
       'nav.trilogy':    '三部作',
       'nav.philosophy': '哲学',
@@ -267,8 +274,8 @@
       });
     });
 
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
-      btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+    document.querySelectorAll('.lang-menu button[data-lang]').forEach(btn => {
+      btn.setAttribute('aria-checked', btn.dataset.lang === lang ? 'true' : 'false');
     });
 
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
@@ -276,9 +283,59 @@
     document.dispatchEvent(new CustomEvent('lang:change', { detail: { lang } }));
   }
 
+  function closeAllMenus() {
+    document.querySelectorAll('.lang-switch').forEach(sw => {
+      const toggle = sw.querySelector('.lang-toggle');
+      const menu = sw.querySelector('.lang-menu');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      if (menu) menu.setAttribute('hidden', '');
+    });
+  }
+
   function bind() {
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
-      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    document.querySelectorAll('.lang-switch').forEach(sw => {
+      const toggle = sw.querySelector('.lang-toggle');
+      const menu = sw.querySelector('.lang-menu');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        closeAllMenus();
+        if (!isOpen) {
+          toggle.setAttribute('aria-expanded', 'true');
+          menu.removeAttribute('hidden');
+          const current = menu.querySelector('[aria-checked="true"]') || menu.querySelector('button');
+          if (current) current.focus();
+        }
+      });
+
+      menu.querySelectorAll('button[data-lang]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyLang(btn.dataset.lang);
+          closeAllMenus();
+          toggle.focus();
+        });
+      });
+
+      menu.addEventListener('keydown', (e) => {
+        const items = Array.from(menu.querySelectorAll('button[data-lang]'));
+        const i = items.indexOf(document.activeElement);
+        if (e.key === 'ArrowDown') { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+        else if (e.key === 'Home') { e.preventDefault(); items[0].focus(); }
+        else if (e.key === 'End') { e.preventDefault(); items[items.length - 1].focus(); }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.lang-switch')) closeAllMenus();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const open = document.querySelector('.lang-toggle[aria-expanded="true"]');
+      closeAllMenus();
+      if (open) open.focus();
     });
   }
 
